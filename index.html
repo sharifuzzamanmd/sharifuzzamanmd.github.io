@@ -530,6 +530,203 @@
             font-size: 0.9rem;
         }
 
+        /* Featured Project */
+        .project-intro {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 720px;
+            margin: -1.5rem 0 2.5rem;
+        }
+
+        .feature {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--navy);
+            border-radius: 6px;
+            padding: 2.5rem;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+        }
+
+        .feature-head h3 {
+            color: var(--navy);
+            font-size: 1.7rem;
+            line-height: 1.25;
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-head .tagline {
+            color: var(--accent-dark);
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.2rem 0.7rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .story {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .story-step h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.35rem;
+        }
+
+        .story-step p {
+            color: var(--text-muted);
+            font-size: 0.97rem;
+        }
+
+        .story-step.highlight {
+            background: var(--bg-alt);
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            padding: 1rem 1.25rem;
+        }
+
+        .pipeline {
+            display: flex;
+            align-items: stretch;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 0 0 2rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pipeline li {
+            flex: 1 1 120px;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.75rem 0.9rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .pipeline li strong {
+            display: block;
+            color: var(--navy);
+            font-size: 0.92rem;
+        }
+
+        .pipeline li:last-child {
+            background: var(--navy);
+            border-color: var(--navy);
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .pipeline li:last-child strong {
+            color: #fff;
+        }
+
+        .demo {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .demo pre {
+            background: var(--navy-deep);
+            color: #dbe6f5;
+            border-radius: 6px;
+            padding: 1rem 1.15rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        .demo .k { color: #8fb4e8; }
+        .demo .hi { color: #ffd38a; }
+
+        .feature-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        .feature-footer .cta-buttons .btn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.88rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        .next-project {
+            margin-top: 1.5rem;
+        }
+
+        .next-project .stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .next-project .stat strong {
+            display: block;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.6rem;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .next-project .stat span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .feature {
+                padding: 1.5rem;
+            }
+
+            .story, .demo {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .feature-head h3 {
+                font-size: 1.4rem;
+            }
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             section {
@@ -549,6 +746,7 @@
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#research">Research</a></li>
@@ -582,6 +780,110 @@
             </div>
             <div class="hero-photo">
                 <img src="profile.jpg" alt="MD Sharifuzzaman">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <div class="container">
+            <span class="eyebrow">Featured Project</span>
+            <h2>From Paper to Product</h2>
+            <p class="project-intro">
+                I don't stop at the publication. This project takes the kidney disease model from my AIAI 2025 paper
+                and rebuilds it as a tested, explainable service, fixing a flaw in the original along the way.
+            </p>
+
+            <article class="feature">
+                <div class="feature-head">
+                    <span class="badge">Research &rarr; Engineering</span>
+                    <h3>Explainable Kidney Disease Risk API</h3>
+                    <p class="tagline">Predicts chronic kidney disease risk from routine clinical data, and shows why.</p>
+                </div>
+
+                <div class="story">
+                    <div class="story-step">
+                        <h4>The problem</h4>
+                        <p>A risk score that clinicians can't question is hard to trust, and real patient records are full of missing lab values.</p>
+                    </div>
+                    <div class="story-step">
+                        <h4>What I built</h4>
+                        <p>A REST API that takes 24 routine measurements, returns a CKD risk score, and explains each prediction with SHAP, flagging any input that was missing and filled in.</p>
+                    </div>
+                    <div class="story-step highlight">
+                        <h4>What I fixed</h4>
+                        <p>The original paper notebook had preprocessing leakage. I rebuilt the pipeline so imputation, scaling and encoding are learned from training folds only.</p>
+                    </div>
+                    <div class="story-step">
+                        <h4>Honest results</h4>
+                        <p>The stacking ensemble still matches the paper's ~99%. But the dataset is small (400 patients, one hospital) and nearly linearly separable, so external validation is still needed.</p>
+                    </div>
+                </div>
+
+                <ol class="pipeline" aria-label="How the system works">
+                    <li><strong>Data</strong>UCI CKD, 400 patients</li>
+                    <li><strong>Clean</strong>Fix types &amp; missing values</li>
+                    <li><strong>Train</strong>4 models, 5-fold CV</li>
+                    <li><strong>Serve</strong>FastAPI + Docker</li>
+                    <li><strong>Explain</strong>Risk + SHAP reasons</li>
+                </ol>
+
+                <div class="demo">
+                    <div>
+                        <p class="demo-label">Request: POST /explain</p>
+<pre>{
+  <span class="k">"age"</span>: 60,
+  <span class="k">"serum_creatinine"</span>: 4.5,
+  <span class="k">"haemoglobin"</span>: 9.0,
+  <span class="k">"hypertension"</span>: "yes",
+  <span class="k">"specific_gravity"</span>: 1.010
+}</pre>
+                    </div>
+                    <div>
+                        <p class="demo-label">Response (top reasons)</p>
+<pre>{
+  <span class="k">"ckd_probability"</span>: 0.99,
+  <span class="k">"risk_level"</span>: "high",
+  <span class="k">"contributions"</span>: [
+    hypertension = yes       +0.25
+    haemoglobin  = 9.0       +0.10
+    <span class="hi">red_blood_cell_count     +0.09  (imputed)</span>
+  ]
+}</pre>
+                    </div>
+                </div>
+
+                <div class="feature-footer">
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">SHAP</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">pytest</span>
+                        <span class="tag">GitHub Actions</span>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/sharifuzzamanmd/clinical-risk-api" target="_blank" class="btn btn-primary">View Code</a>
+                        <a href="https://doi.org/10.1007/978-3-031-96235-6_15" target="_blank" class="btn btn-secondary">Read the Paper</a>
+                    </div>
+                </div>
+                <p class="disclaimer">Research and portfolio project. Not a medical device and not for clinical decisions.</p>
+            </article>
+
+            <div class="card next-project">
+                <span class="badge">Next step &middot; In development</span>
+                <h3>CKD Care-Gap Agent</h3>
+                <p class="meta">From scoring one patient to finding undiagnosed cases across a population</p>
+                <ul>
+                    <li>Estimates CKD risk for people who have never had a kidney test, using national NHANES 2021&ndash;2023 survey data</li>
+                    <li>Kidney lab values removed from the inputs, SMOTE only inside training folds, calibrated probabilities, fairness reported by sex and race/ethnicity</li>
+                    <li>A local LLM drafts a short clinician note from the model's facts; a safety check rejects any number not in those facts, and a clinician approves every action</li>
+                </ul>
+                <div class="stats">
+                    <div class="stat"><strong>85.7%</strong><span>of probable CKD cases in the sample were undiagnosed</span></div>
+                    <div class="stat"><strong>0.79</strong><span>test AUC, without kidney labs</span></div>
+                </div>
+                <a href="https://github.com/sharifuzzamanmd/ckd-care-gap-agent" target="_blank" class="read-link" style="font-weight:600; text-decoration:none;">View on GitHub &rarr;</a>
             </div>
         </div>
     </section>
@@ -693,6 +995,7 @@
                 <p class="authors">Sharifuzzaman, M., Fahad, N., Rabbi, R. I., Sadib, R. J., Tusher, E. H., Liew, T. H., Islam, M. N., Miah, M. S. U., &amp; Hossen, M. J.</p>
                 <p class="venue">21st International Conference on Artificial Intelligence Applications and Innovations (AIAI), 2025</p>
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-96235-6_15" target="_blank" class="read-link">Read Paper &rarr;</a>
+                <a href="#projects" class="read-link" style="margin-left: 1.25rem;">See it as a working API &rarr;</a>
             </div>
 
             <div class="publication">
